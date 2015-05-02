@@ -1,6 +1,6 @@
 {
   "name": "geo-nuts-administrative-boundaries",
-  "title": "Country Polygons as GeoJSON at 1:110m",
+  "title": "European NUTS boundaries as GeoJSON at 1:60m",
   "version": "0.1.0",
   "description": "geodata data package providing geojson polygons and shp for administratives European NUTS, levels 1, 2 and 3",
   "repository": {
