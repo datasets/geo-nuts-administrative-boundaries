@@ -44,8 +44,6 @@
       "bytes": 6139865
     }
   ],
-  "bugs": {
-    "url": "https://github.com/datasets/geo-nuts-administrative-boundaries/issues"
-  },
+  "bugs": "https://github.com/datasets/geo-nuts-administrative-boundaries/issues",
   "homepage": "https://github.com/datasets/geo-nuts-administrative-boundaries"
 }
