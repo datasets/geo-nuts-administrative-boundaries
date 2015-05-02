@@ -1,0 +1,51 @@
+{
+  "name": "geo-nuts-administrative-boundaries",
+  "title": "Country Polygons as GeoJSON at 1:110m",
+  "version": "0.1.0",
+  "description": "geodata data package providing geojson polygons and shp for administratives European NUTS, levels 1, 2 and 3",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/datasets/geo-nuts-administrative-boundaries.git"
+  },
+  "sources": [{
+    "name": "GISCO (the Geographical Information System at the COmmission)",
+    "web": "http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data"
+  }],
+  "keywords": [
+    "geodata",
+    "vector",
+    "nuts",
+    "europe"
+  ],
+  "licenses": {
+    "type": "ODC-PDDL",
+    "url": "http://opendatacommons.org/licenses/pddl/1.0/"
+  },
+  "resources": [
+    {
+      "name": "nuts_rg_60m_2010_lvl_1",
+      "path": "data/nuts_rg_60m_2010_lvl_1.geojson",
+      "format": "geojson",
+      "mediatype": "application/json",
+      "bytes": 2472259
+    },
+    {
+      "name": "nuts_rg_60m_2010_lvl_2",
+      "path": "data/nuts_rg_60m_2010_lvl_2.geojson",
+      "format": "geojson",
+      "mediatype": "application/json",
+      "bytes": 3485901
+    },
+    {
+      "name": "nuts_rg_60m_2010_lvl_3",
+      "path": "data/nuts_rg_60m_2010_lvl_3.geojson",
+      "format": "geojson",
+      "mediatype": "application/json",
+      "bytes": 6139865
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/datasets/geo-nuts-administrative-boundaries/issues"
+  },
+  "homepage": "https://github.com/datasets/geo-nuts-administrative-boundaries"
+}
