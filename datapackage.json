@@ -1,8 +1,8 @@
 {
   "name": "geo-nuts-administrative-boundaries",
   "title": "European NUTS boundaries as GeoJSON at 1:60m",
-  "version": "0.1.0",
-  "description": "geodata data package providing geojson polygons and shp for administratives European NUTS, levels 1, 2 and 3",
+  "version": "0.2.0",
+  "description": "geodata data package providing geojson polygons and shp for administratives European NUTS levels 1, 2 and 3",
   "repository": {
     "type": "git",
     "url": "git://github.com/datasets/geo-nuts-administrative-boundaries.git"
@@ -45,5 +45,12 @@
     }
   ],
   "bugs": "https://github.com/datasets/geo-nuts-administrative-boundaries/issues",
-  "homepage": "https://github.com/datasets/geo-nuts-administrative-boundaries"
+  "homepage": "https://github.com/datasets/geo-nuts-administrative-boundaries",
+  "maintainers": [
+    {
+    "name": "Thomas Gratier",
+    "email": "thomas_gratier@yahoo.fr"
+    }
+  ],
+  "contributors":[]
 }
