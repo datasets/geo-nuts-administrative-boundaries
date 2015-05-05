@@ -1,4 +1,4 @@
-var filename = 'data/NUTS_2010_60M_SH.zip';
+var filename = 'NUTS_2010_60M_SH.zip';
 var debug = require('debug')('gdal'),
     http = require('http'),
     fs = require('fs'),
@@ -7,7 +7,7 @@ var debug = require('debug')('gdal'),
     gdal = require('gdal'),
     shelljs = require('shelljs'),
     S = require('string'),
-    out = fs.createWriteStream('data/NUTS_2010_60M_SH.zip')
+    out = fs.createWriteStream(filename);
 
 // Create data directory
 var dataDir = 'data';
