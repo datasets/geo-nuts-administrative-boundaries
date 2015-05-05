@@ -9,8 +9,13 @@ var debug = require('debug')('gdal'),
     S = require('string'),
     out = fs.createWriteStream('data/NUTS_2010_60M_SH.zip')
 
-// Declare function to transform geodata
+// Create data directory
+var dataDir = 'data';
+if (!shelljs.test('-e', dataDir)) {
+    shelljs.mkdir(dataDir);
+}
 
+// Declare function to transform geodata
 function generateFromSQL(inputFileName, outputFileName, options) {
     // Set options
     var opts = options || { outputDriverName: 'ESRI Shapefile', outputSrsCode: 4326};
