@@ -10,7 +10,7 @@ var debug = require('debug')('gdal'),
     out = fs.createWriteStream(filename);
 
 // Create data directory
-var dataDir = 'data';
+var dataDir = '../data';
 if (!shelljs.test('-e', dataDir)) {
     shelljs.mkdir(dataDir);
 }
@@ -41,7 +41,7 @@ function generateFromSQL(inputFileName, outputFileName, options) {
     var srs = gdal.SpatialReference.fromEPSG(opts.outputSrsCode);
     // Create the function for SRS transformation between both SRS (input, output)
     var transformer = new gdal.CoordinateTransformation(srs_source, srs);
-    
+
     // Set output driver
     var dst_driver = gdal.drivers.get(opts.outputDriverName);
     // Create output datasource using output filename
@@ -92,38 +92,38 @@ req.pipe(out);
 req.on('end', function() {
     var zip = new AdmZip(filename),
     zipEntries = zip.getEntries();
-    zip.extractAllTo(/*target path*/"data/", /*overwrite*/true);
+    zip.extractAllTo(/*target path*/"../data/", /*overwrite*/true);
     shelljs.rm(filename);
 
     var drivers = gdal.GDALDrivers;
     debug(drivers.prototype.getNames());
 
-    var inputFileName = 'data/NUTS_2010_60M_SH/NUTS_2010_60M_SH/data/NUTS_RG_60M_2010.shp';
+    var inputFileName = '../data/NUTS_2010_60M_SH/NUTS_2010_60M_SH/data/NUTS_RG_60M_2010.shp';
     var query = 'SELECT * FROM NUTS_RG_60M_2010 WHERE STAT_LEVL_ = ';
 
     // We create shp directory
-    var shpDataDir = 'data/shp';
+    var shpDataDir = '../data/shp';
     if (!shelljs.test('-e', shpDataDir)) {
         shelljs.mkdir(shpDataDir);
     }
-    var existingFiles = shelljs.ls('data/nuts_rg_60m_2010_lvl_*', 'data/shp/nuts_rg_60m_2010_lvl_*');
+    var existingFiles = shelljs.ls('../data/nuts_rg_60m_2010_lvl_*', '../data/shp/nuts_rg_60m_2010_lvl_*');
     debug(existingFiles);
     // We clean existing files
     existingFiles.forEach(function(file) {
         if (shelljs.test('-e', file)) {
             shelljs.rm(file);
         }
-    });   
+    });
 
     var levels = ['1', '2', '3'];
     levels.forEach(function(el) {
-        var outputFileNameShp = __dirname + '/data/shp/nuts_rg_60m_2010_lvl_' + el + '.shp';
+        var outputFileNameShp = '../data/shp/nuts_rg_60m_2010_lvl_' + el + '.shp';
         generateFromSQL(inputFileName, outputFileNameShp, {
             query: query + el,
             outputDriverName: 'ESRI Shapefile',
             outputSrsCode: 4326
         });
-        var outputFileNameGeoJSON = __dirname + '/data/nuts_rg_60m_2010_lvl_' + el + '.geojson';
+        var outputFileNameGeoJSON = '../data/nuts_rg_60m_2010_lvl_' + el + '.geojson';
         generateFromSQL(inputFileName, outputFileNameGeoJSON, {
             query: query + el,
             outputDriverName: 'GeoJSON',
