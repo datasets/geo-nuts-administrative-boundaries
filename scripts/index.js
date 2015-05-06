@@ -95,9 +95,6 @@ req.on('end', function() {
     zip.extractAllTo(/*target path*/"../data/", /*overwrite*/true);
     shelljs.rm(filename);
 
-    var drivers = gdal.GDALDrivers;
-    debug(drivers.prototype.getNames());
-
     var inputFileName = '../data/NUTS_2010_60M_SH/NUTS_2010_60M_SH/data/NUTS_RG_60M_2010.shp';
     var query = 'SELECT * FROM NUTS_RG_60M_2010 WHERE STAT_LEVL_ = ';
 
