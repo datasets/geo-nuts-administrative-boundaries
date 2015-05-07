@@ -27,7 +27,7 @@ If you need other related informations to NUTS, you can take a look at PDF file 
 
 This package include the script to automate data retrieving and filtering. As we use NodeJs/Io.js, you need to install the software. Then, install dependencies with:
 
-    cd scripts and npm install
+    cd scripts && npm install
 
 To launch all the process, just do `node index.js`.
 
