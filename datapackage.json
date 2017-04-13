@@ -17,10 +17,10 @@
     "nuts",
     "europe"
   ],
-  "licenses": {
+  "licenses": [{
     "type": "ODC-PDDL",
     "url": "http://opendatacommons.org/licenses/pddl/1.0/"
-  },
+  }],
   "resources": [
     {
       "name": "nuts_rg_60m_2010_lvl_1",
