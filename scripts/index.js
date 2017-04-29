@@ -1,5 +1,7 @@
-var filename = 'NUTS_2010_60M_SH.zip';
-var debug = require('debug')('gdal'),
+const scale = process.argv[2] || "60M",
+    filename = `NUTS_2013_${scale}_SH.zip`;
+
+const debug = require('debug')('gdal'),
     http = require('http'),
     fs = require('fs'),
     request = require('request'),
@@ -10,7 +12,7 @@ var debug = require('debug')('gdal'),
     out = fs.createWriteStream(filename);
 
 // Create data directory
-var dataDir = '../data';
+const dataDir = '../data';
 if (!shelljs.test('-e', dataDir)) {
     shelljs.mkdir(dataDir);
 }
@@ -76,9 +78,9 @@ function generateFromSQL(inputFileName, outputFileName, options) {
     ds_dst.close();
 }
 
-var req = request({
+let req = request({
     method: 'GET',
-    uri: 'http://ec.europa.eu/eurostat/cache/GISCO/geodatafiles/NUTS_2010_60M_SH.zip',
+    uri: `http://ec.europa.eu/eurostat/cache/GISCO/geodatafiles/${filename}`,
     headers: {
         'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.97 Safari/537.11',
         'Referer': '',
@@ -89,21 +91,21 @@ var req = request({
 });
 
 req.pipe(out);
+
 req.on('end', function() {
-    var zip = new AdmZip(filename),
-    zipEntries = zip.getEntries();
+    let zip = new AdmZip(filename);
     zip.extractAllTo(/*target path*/"../data/", /*overwrite*/true);
     shelljs.rm(filename);
 
-    var inputFileName = '../data/NUTS_2010_60M_SH/NUTS_2010_60M_SH/data/NUTS_RG_60M_2010.shp';
-    var query = 'SELECT * FROM NUTS_RG_60M_2010 WHERE STAT_LEVL_ = ';
+    let inputFileName = `../data/NUTS_2013_${scale}_SH/data/NUTS_RG_${scale}_2013.shp`;
+    let query = `SELECT * FROM NUTS_RG_${scale}_2013 WHERE STAT_LEVL_ = `;
 
     // We create shp directory
-    var shpDataDir = '../data/shp';
+    let shpDataDir = '../data/shp';
     if (!shelljs.test('-e', shpDataDir)) {
         shelljs.mkdir(shpDataDir);
     }
-    var existingFiles = shelljs.ls('../data/nuts_rg_60m_2010_lvl_*', '../data/shp/nuts_rg_60m_2010_lvl_*');
+    let existingFiles = shelljs.ls(`../data/nuts_rg_${scale}_2013_lvl_*`, `../data/shp/nuts_rg_${scale}_2013_lvl_*`);
     debug(existingFiles);
     // We clean existing files
     existingFiles.forEach(function(file) {
@@ -112,15 +114,15 @@ req.on('end', function() {
         }
     });
 
-    var levels = ['1', '2', '3'];
+    let levels = ['1', '2', '3'];
     levels.forEach(function(el) {
-        var outputFileNameShp = '../data/shp/nuts_rg_60m_2010_lvl_' + el + '.shp';
+        let outputFileNameShp = `../data/shp/nuts_rg_${scale}_2013_lvl_${el}.shp`;
         generateFromSQL(inputFileName, outputFileNameShp, {
             query: query + el,
             outputDriverName: 'ESRI Shapefile',
             outputSrsCode: 4326
         });
-        var outputFileNameGeoJSON = '../data/nuts_rg_60m_2010_lvl_' + el + '.geojson';
+        let outputFileNameGeoJSON = `../data/nuts_rg_${scale}_2013_lvl_${el}.geojson`;
         generateFromSQL(inputFileName, outputFileNameGeoJSON, {
             query: query + el,
             outputDriverName: 'GeoJSON',

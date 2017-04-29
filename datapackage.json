@@ -1,7 +1,7 @@
 {
   "name": "geo-nuts-administrative-boundaries",
   "title": "European NUTS boundaries as GeoJSON at 1:60m",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "geodata data package providing geojson polygons and shp for administratives European NUTS levels 1, 2 and 3",
   "repository": {
     "type": "git",
@@ -23,25 +23,25 @@
   }],
   "resources": [
     {
-      "name": "nuts_rg_60m_2010_lvl_1",
-      "path": "data/nuts_rg_60m_2010_lvl_1.geojson",
+      "name": "nuts_rg_60M_2013_lvl_1",
+      "path": "data/nuts_rg_60M_2013_lvl_1.geojson",
       "format": "geojson",
       "mediatype": "application/json",
-      "bytes": 2472259
+      "bytes": 202546
     },
     {
-      "name": "nuts_rg_60m_2010_lvl_2",
-      "path": "data/nuts_rg_60m_2010_lvl_2.geojson",
+      "name": "nuts_rg_60M_2013_lvl_2",
+      "path": "data/nuts_rg_60M_2013_lvl_2.geojson",
       "format": "geojson",
       "mediatype": "application/json",
-      "bytes": 3485901
+      "bytes": 327135
     },
     {
-      "name": "nuts_rg_60m_2010_lvl_3",
-      "path": "data/nuts_rg_60m_2010_lvl_3.geojson",
+      "name": "nuts_rg_60M_2013_lvl_3",
+      "path": "data/nuts_rg_60M_2013_lvl_3.geojson",
       "format": "geojson",
       "mediatype": "application/json",
-      "bytes": 6139865
+      "bytes": 811184
     }
   ],
   "bugs": "https://github.com/datasets/geo-nuts-administrative-boundaries/issues",
@@ -52,5 +52,10 @@
     "email": "thomas_gratier@yahoo.fr"
     }
   ],
-  "contributors":[]
+  "contributors":[
+    {
+      "name": "Dainis Gorbunovs",
+      "email": "dainiscode@gmail.com"
+    }
+  ]
 }
