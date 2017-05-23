@@ -23,21 +23,21 @@
   }],
   "resources": [
     {
-      "name": "nuts_rg_60M_2013_lvl_1",
+      "name": "nuts_rg_60m_2013_lvl_1",
       "path": "data/nuts_rg_60M_2013_lvl_1.geojson",
       "format": "geojson",
       "mediatype": "application/json",
       "bytes": 202546
     },
     {
-      "name": "nuts_rg_60M_2013_lvl_2",
+      "name": "nuts_rg_60m_2013_lvl_2",
       "path": "data/nuts_rg_60M_2013_lvl_2.geojson",
       "format": "geojson",
       "mediatype": "application/json",
       "bytes": 327135
     },
     {
-      "name": "nuts_rg_60M_2013_lvl_3",
+      "name": "nuts_rg_60m_2013_lvl_3",
       "path": "data/nuts_rg_60M_2013_lvl_3.geojson",
       "format": "geojson",
       "mediatype": "application/json",
