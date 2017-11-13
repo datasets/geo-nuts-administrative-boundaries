@@ -9,7 +9,8 @@
   },
   "sources": [{
     "name": "GISCO (the Geographical Information System at the COmmission)",
-    "web": "http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data"
+    "path": "http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data",
+    "title": "GISCO (the Geographical Information System at the COmmission)"
   }],
   "keywords": [
     "geodata",
@@ -54,7 +55,7 @@
   ],
   "contributors":[
     {
-      "name": "Dainis Gorbunovs",
+      "title": "Dainis Gorbunovs",
       "email": "dainiscode@gmail.com"
     }
   ]
