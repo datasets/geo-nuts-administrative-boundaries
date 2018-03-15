@@ -7,21 +7,26 @@
     "type": "git",
     "url": "git://github.com/datasets/geo-nuts-administrative-boundaries.git"
   },
-  "sources": [{
-    "name": "GISCO (the Geographical Information System at the COmmission)",
-    "path": "http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data",
-    "title": "GISCO (the Geographical Information System at the COmmission)"
-  }],
+  "sources": [
+    {
+      "name": "GISCO (the Geographical Information System at the COmmission)",
+      "path": "http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data",
+      "title": "GISCO (the Geographical Information System at the COmmission)"
+    }
+  ],
   "keywords": [
     "geodata",
     "vector",
     "nuts",
     "europe"
   ],
-  "licenses": [{
-    "type": "ODC-PDDL",
-    "url": "http://opendatacommons.org/licenses/pddl/1.0/"
-  }],
+  "licenses": [
+    {
+      "name": "ODC-PDDL-1.0",
+      "path": "http://opendatacommons.org/licenses/pddl/",
+      "title": "Open Data Commons Public Domain Dedication and License v1.0"
+    }
+  ],
   "resources": [
     {
       "name": "nuts_rg_60m_2013_lvl_1",
@@ -47,16 +52,15 @@
   ],
   "bugs": "https://github.com/datasets/geo-nuts-administrative-boundaries/issues",
   "homepage": "https://github.com/datasets/geo-nuts-administrative-boundaries",
-  "maintainers": [
-    {
-    "name": "Thomas Gratier",
-    "email": "thomas_gratier@yahoo.fr"
-    }
-  ],
   "contributors":[
     {
       "title": "Dainis Gorbunovs",
       "email": "dainiscode@gmail.com"
+    },
+    {
+      "title": "Thomas Gratier",
+      "email": "thomas_gratier@yahoo.fr",
+      "role": "maintainer"
     }
   ]
 }
