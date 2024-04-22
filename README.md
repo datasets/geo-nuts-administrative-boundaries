@@ -33,9 +33,9 @@ To launch all the process, just do (default scale: `60M`):
 
     node index.js
 
-Or specify scale and use the following command, where `{scale}` can be `01M`, `03M`, `10M`, `20M` or the default `60M`:
+Or specify scale and use the following command, where `&#123;scale&#125;` can be `01M`, `03M`, `10M`, `20M` or the default `60M`:
 
-    node index.js {scale}
+    node index.js &#123;scale&#125;
 
 We choose to let a lot of comments and you may encounter some minors job unrelated code for learning purpose if you need to use [node-gdal library](https://github.com/naturalatlas/node-gdal).
 
