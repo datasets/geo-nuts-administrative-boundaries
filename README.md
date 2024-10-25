@@ -1,4 +1,4 @@
-<a href="https://datahub.io/core/geo-nuts-administrative-boundaries"><img src="https://badgen.net/badge/icon/View%20on%20datahub.io/orange?icon=https://datahub.io/datahub-cube-badge-icon.svg&label&scale=1.25)" alt="badge" /></a>
+<a className="gh-badge" href="https://datahub.io/core/geo-nuts-administrative-boundaries"><img src="https://badgen.net/badge/icon/View%20on%20datahub.io/orange?icon=https://datahub.io/datahub-cube-badge-icon.svg&label&scale=1.25" alt="badge" /></a>
 
 Geo Boundaries for NUTS administrative levels 1, 2 and 3 edition 2013.
 
