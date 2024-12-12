@@ -33,7 +33,8 @@ python scripts/process.py
 ```
 
 # Automation
-Up-to-date (auto-updates every year) geo-nuts-administartive-boundaries dataset could be found on the datahub.io:
+
+Up-to-date (auto-updates every year due to original data being updated infrequently) geo-nuts-administartive-boundaries dataset could be found on the datahub.io:
 https://datahub.io/core/geo-nuts-administartive-boundaries 
 
 ## License
