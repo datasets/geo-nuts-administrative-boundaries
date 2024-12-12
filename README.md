@@ -1,45 +1,41 @@
 <a className="gh-badge" href="https://datahub.io/core/geo-nuts-administrative-boundaries"><img src="https://badgen.net/badge/icon/View%20on%20datahub.io/orange?icon=https://datahub.io/datahub-cube-badge-icon.svg&label&scale=1.25" alt="badge" /></a>
 
-Geo Boundaries for NUTS administrative levels 1, 2 and 3 edition 2013.
+# Geo Boundaries for NUTS administrative levels 1, 2 and 3
 
-If you don't know what NUTS (Nomenclature of Territorial Units for Statistics) are, see the [related Wikipedia article](https://en.wikipedia.org/wiki/Nomenclature_of_Territorial_Units_for_Statistics)
+If you don't know what NUTS (Nomenclature of Territorial Units for Statistics) are, see the [related Wikipedia article](https://en.wikipedia.org/wiki/Nomenclature_of_Territorial_Units_for_Statistics).
 
 ## Data
 
-Data is taken from the [GISCO EU website](http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data).
+Data is sourced from the [GISCO EU website](https://gisco-services.ec.europa.eu/distribution/v2/nuts/).
 
-We choose to deliver data as Shapefiles (SHP) and as GeoJSON.
+We provide data as GeoJSON. Data is stored in the `data` folder.
 
-SHP are in `data/shp` directory.
+Datasets are available for NUTS levels 1, 2, and 3.
 
-GeoJSON are in `data` folder
-
-Datasets are provided for NUTS levels 1, 2 and 3.
-
-The columns are
+The columns are:
 
 * **NUTS_ID**: String (5.0)
 * **STAT_LEVL_**: Integer (9.0)
 
-You will also find the original data within `data/NUTS_2013_60M_SH`.
-
-If you need other related informations to NUTS, you can take a look at PDF file describing relationships between original tables in `data/NUTS_2013_60M_SH/NUTS_2013_60M_SH/metadata/NUTS_2013_metadata.pdf`
+The specific administrative boundary data used in this project is provided at the `60M` scale with `RG` units, and utilizes the `EPSG:4326` coordinate reference system [EPSG:4326](https://epsg.io/4326).
 
 ## Preparation
 
-This package include the script to automate data retrieving and filtering. As we use NodeJs/Io.js, you need to install the software. Then, install dependencies with:
+This package includes scripts to automate data retrieval and processing.  
+First, install the dependencies:
 
-    cd scripts && npm install
+```bash
+# Install libraries
+pip install -r scripts/requirements.txt
 
-To launch all the process, just do (default scale: `60M`):
+# Run script
+python scripts/process.py
+```
 
-    node index.js
+# Automation
 
-Or specify scale and use the following command, where `&#123;scale&#125;` can be `01M`, `03M`, `10M`, `20M` or the default `60M`:
-
-    node index.js &#123;scale&#125;
-
-We choose to let a lot of comments and you may encounter some minors job unrelated code for learning purpose if you need to use [node-gdal library](https://github.com/naturalatlas/node-gdal).
+Up-to-date (auto-updates every year due to original data being updated infrequently) geo-nuts-administartive-boundaries dataset could be found on the datahub.io:
+https://datahub.io/core/geo-nuts-administartive-boundaries 
 
 ## License
 
