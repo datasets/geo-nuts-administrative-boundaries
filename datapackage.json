@@ -33,21 +33,21 @@
       "path": "data/NUTS_RG_60M_2024_4326_LEVL_1.geojson",
       "format": "geojson",
       "mediatype": "application/json",
-      "bytes": 225475
+      "bytes": 233214
     },
     {
       "name": "NUTS_RG_60M_2024_4326_LEVL_2",
       "path": "data/NUTS_RG_60M_2024_4326_LEVL_2.geojson",
       "format": "geojson",
       "mediatype": "application/json",
-      "bytes": 354530
+      "bytes": 365644
     },
     {
       "name": "NUTS_RG_60M_2024_4326_LEVL_3",
       "path": "data/NUTS_RG_60M_2024_4326_LEVL_3.geojson",
       "format": "geojson",
       "mediatype": "application/json",
-      "bytes": 900049
+      "bytes": 905038
     }
   ],
   "bugs": "https://github.com/datasets/geo-nuts-administrative-boundaries/issues",
