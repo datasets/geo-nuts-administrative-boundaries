@@ -63,5 +63,9 @@
       "role": "maintainer"
     }
   ],
-  "collection": "geojson"
+  "collection": "geojson",
+  "has_solutions": [
+    "global-country-region-reference-data",
+    "worldwide-postal-code-database"
+  ]
 }
