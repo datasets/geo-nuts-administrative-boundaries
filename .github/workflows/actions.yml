@@ -1,9 +1,9 @@
 name: Update gdp data
 
 on:
-  # Schedule to run yearly on January 1st
+  # Schedule: monthly (keeps the schedule from being switched off for inactivity)
   schedule:
-    - cron: '0 0 1 1 *'
+    - cron: '0 0 1 * *'
 
   # Run on push to main branch
   push:
@@ -17,6 +17,10 @@ on:
 
   # Allows manual triggering of the workflow
   workflow_dispatch: 
+
+permissions:
+  contents: write
+  actions: write
 
 jobs:
   build:
@@ -62,3 +66,7 @@ jobs:
         )
       env:
         CI_COMMIT_MESSAGE: "Automated commit"
+    - name: Keep the schedule enabled
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: gh workflow enable "${{ github.workflow }}" --repo "${{ github.repository }}" || true

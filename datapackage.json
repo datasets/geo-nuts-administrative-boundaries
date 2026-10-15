@@ -2,7 +2,7 @@
   "name": "geo-nuts-administrative-boundaries",
   "title": "European NUTS boundaries as GeoJSON at 1:60m",
   "version": "0.3.0",
-  "description": "geodata data package providing geojson polygons and shp for administratives European NUTS levels 1, 2 and 3",
+  "description": "Boundaries of the European NUTS regions (levels 1, 2 and 3, edition 2024, scale 1:60 million, EPSG:4326) as GeoJSON, rebuilt from the Eurostat GISCO files.",
   "repository": {
     "type": "git",
     "url": "git://github.com/datasets/geo-nuts-administrative-boundaries.git"
@@ -29,25 +29,295 @@
   ],
   "resources": [
     {
-      "name": "NUTS_RG_60M_2024_4326_LEVL_1",
+      "name": "nuts-rg-60m-2024-4326-levl-1",
       "path": "data/NUTS_RG_60M_2024_4326_LEVL_1.geojson",
       "format": "geojson",
-      "mediatype": "application/json",
-      "bytes": 233214
+      "mediatype": "application/geo+json",
+      "bytes": 233136,
+      "schema": {
+        "fields": [
+          {
+            "name": "NUTS_ID",
+            "type": "string",
+            "description": "NUTS code of the region, for example DE212."
+          },
+          {
+            "name": "LEVL_CODE",
+            "type": "integer",
+            "description": "NUTS level: 1, 2 or 3."
+          },
+          {
+            "name": "CNTR_CODE",
+            "type": "string",
+            "description": "Two-letter country code used by Eurostat, for example DE or EL."
+          },
+          {
+            "name": "NAME_LATN",
+            "type": "string",
+            "description": "Region name in Latin script."
+          },
+          {
+            "name": "NUTS_NAME",
+            "type": "string",
+            "description": "Region name in the national language and script (for example Greek or Cyrillic)."
+          },
+          {
+            "name": "MOUNT_TYPE",
+            "type": "integer",
+            "description": "Mountain typology code from GISCO. Empty (null) where GISCO gives none."
+          },
+          {
+            "name": "URBN_TYPE",
+            "type": "integer",
+            "description": "Urban-rural typology code from GISCO. Empty (null) where GISCO gives none."
+          },
+          {
+            "name": "COAST_TYPE",
+            "type": "integer",
+            "description": "Coastal typology code from GISCO. Empty (null) where GISCO gives none."
+          },
+          {
+            "name": "NAME_ENGL",
+            "type": "string",
+            "description": "Country name in English."
+          },
+          {
+            "name": "NAME_FREN",
+            "type": "string",
+            "description": "Country name in French. Empty (null) on a few features."
+          },
+          {
+            "name": "ISO3_CODE",
+            "type": "string",
+            "description": "Three-letter ISO 3166-1 country code."
+          },
+          {
+            "name": "SVRG_UN",
+            "type": "string",
+            "description": "Sovereignty status of the country, for example UN Member State."
+          },
+          {
+            "name": "CAPT",
+            "type": "string",
+            "description": "Capital of the country. Empty (null) on a few features."
+          },
+          {
+            "name": "EU_STAT",
+            "type": "string",
+            "description": "T if the country is an EU member state, otherwise F."
+          },
+          {
+            "name": "EFTA_STAT",
+            "type": "string",
+            "description": "T if the country is an EFTA member, otherwise F."
+          },
+          {
+            "name": "CC_STAT",
+            "type": "string",
+            "description": "T if the country is an EU candidate country, otherwise F."
+          },
+          {
+            "name": "NAME_GERM",
+            "type": "string",
+            "description": "Country name in German. Empty (null) on a few features."
+          }
+        ],
+        "primaryKey": "NUTS_ID"
+      }
     },
     {
-      "name": "NUTS_RG_60M_2024_4326_LEVL_2",
+      "name": "nuts-rg-60m-2024-4326-levl-2",
       "path": "data/NUTS_RG_60M_2024_4326_LEVL_2.geojson",
       "format": "geojson",
-      "mediatype": "application/json",
-      "bytes": 365644
+      "mediatype": "application/geo+json",
+      "bytes": 365566,
+      "schema": {
+        "fields": [
+          {
+            "name": "NUTS_ID",
+            "type": "string",
+            "description": "NUTS code of the region, for example DE212."
+          },
+          {
+            "name": "LEVL_CODE",
+            "type": "integer",
+            "description": "NUTS level: 1, 2 or 3."
+          },
+          {
+            "name": "CNTR_CODE",
+            "type": "string",
+            "description": "Two-letter country code used by Eurostat, for example DE or EL."
+          },
+          {
+            "name": "NAME_LATN",
+            "type": "string",
+            "description": "Region name in Latin script."
+          },
+          {
+            "name": "NUTS_NAME",
+            "type": "string",
+            "description": "Region name in the national language and script (for example Greek or Cyrillic)."
+          },
+          {
+            "name": "MOUNT_TYPE",
+            "type": "integer",
+            "description": "Mountain typology code from GISCO. Empty (null) where GISCO gives none."
+          },
+          {
+            "name": "URBN_TYPE",
+            "type": "integer",
+            "description": "Urban-rural typology code from GISCO. Empty (null) where GISCO gives none."
+          },
+          {
+            "name": "COAST_TYPE",
+            "type": "integer",
+            "description": "Coastal typology code from GISCO. Empty (null) where GISCO gives none."
+          },
+          {
+            "name": "NAME_ENGL",
+            "type": "string",
+            "description": "Country name in English."
+          },
+          {
+            "name": "NAME_FREN",
+            "type": "string",
+            "description": "Country name in French. Empty (null) on a few features."
+          },
+          {
+            "name": "ISO3_CODE",
+            "type": "string",
+            "description": "Three-letter ISO 3166-1 country code."
+          },
+          {
+            "name": "SVRG_UN",
+            "type": "string",
+            "description": "Sovereignty status of the country, for example UN Member State."
+          },
+          {
+            "name": "CAPT",
+            "type": "string",
+            "description": "Capital of the country. Empty (null) on a few features."
+          },
+          {
+            "name": "EU_STAT",
+            "type": "string",
+            "description": "T if the country is an EU member state, otherwise F."
+          },
+          {
+            "name": "EFTA_STAT",
+            "type": "string",
+            "description": "T if the country is an EFTA member, otherwise F."
+          },
+          {
+            "name": "CC_STAT",
+            "type": "string",
+            "description": "T if the country is an EU candidate country, otherwise F."
+          },
+          {
+            "name": "NAME_GERM",
+            "type": "string",
+            "description": "Country name in German. Empty (null) on a few features."
+          }
+        ],
+        "primaryKey": "NUTS_ID"
+      }
     },
     {
-      "name": "NUTS_RG_60M_2024_4326_LEVL_3",
+      "name": "nuts-rg-60m-2024-4326-levl-3",
       "path": "data/NUTS_RG_60M_2024_4326_LEVL_3.geojson",
       "format": "geojson",
-      "mediatype": "application/json",
-      "bytes": 905038
+      "mediatype": "application/geo+json",
+      "bytes": 904960,
+      "schema": {
+        "fields": [
+          {
+            "name": "NUTS_ID",
+            "type": "string",
+            "description": "NUTS code of the region, for example DE212."
+          },
+          {
+            "name": "LEVL_CODE",
+            "type": "integer",
+            "description": "NUTS level: 1, 2 or 3."
+          },
+          {
+            "name": "CNTR_CODE",
+            "type": "string",
+            "description": "Two-letter country code used by Eurostat, for example DE or EL."
+          },
+          {
+            "name": "NAME_LATN",
+            "type": "string",
+            "description": "Region name in Latin script."
+          },
+          {
+            "name": "NUTS_NAME",
+            "type": "string",
+            "description": "Region name in the national language and script (for example Greek or Cyrillic)."
+          },
+          {
+            "name": "MOUNT_TYPE",
+            "type": "integer",
+            "description": "Mountain typology code from GISCO. Empty (null) where GISCO gives none."
+          },
+          {
+            "name": "URBN_TYPE",
+            "type": "integer",
+            "description": "Urban-rural typology code from GISCO. Empty (null) where GISCO gives none."
+          },
+          {
+            "name": "COAST_TYPE",
+            "type": "integer",
+            "description": "Coastal typology code from GISCO. Empty (null) where GISCO gives none."
+          },
+          {
+            "name": "NAME_ENGL",
+            "type": "string",
+            "description": "Country name in English."
+          },
+          {
+            "name": "NAME_FREN",
+            "type": "string",
+            "description": "Country name in French. Empty (null) on a few features."
+          },
+          {
+            "name": "ISO3_CODE",
+            "type": "string",
+            "description": "Three-letter ISO 3166-1 country code."
+          },
+          {
+            "name": "SVRG_UN",
+            "type": "string",
+            "description": "Sovereignty status of the country, for example UN Member State."
+          },
+          {
+            "name": "CAPT",
+            "type": "string",
+            "description": "Capital of the country. Empty (null) on a few features."
+          },
+          {
+            "name": "EU_STAT",
+            "type": "string",
+            "description": "T if the country is an EU member state, otherwise F."
+          },
+          {
+            "name": "EFTA_STAT",
+            "type": "string",
+            "description": "T if the country is an EFTA member, otherwise F."
+          },
+          {
+            "name": "CC_STAT",
+            "type": "string",
+            "description": "T if the country is an EU candidate country, otherwise F."
+          },
+          {
+            "name": "NAME_GERM",
+            "type": "string",
+            "description": "Country name in German. Empty (null) on a few features."
+          }
+        ],
+        "primaryKey": "NUTS_ID"
+      }
     }
   ],
   "bugs": "https://github.com/datasets/geo-nuts-administrative-boundaries/issues",
