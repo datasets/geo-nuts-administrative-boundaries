@@ -2,16 +2,16 @@
   "name": "geo-nuts-administrative-boundaries",
   "title": "European NUTS boundaries as GeoJSON at 1:60m",
   "version": "0.3.0",
-  "description": "Boundaries of the European NUTS regions (levels 1, 2 and 3, edition 2024, scale 1:60 million, EPSG:4326) as GeoJSON, rebuilt from the Eurostat GISCO files.",
+  "description": "Boundaries of the European NUTS regions (levels 1, 2 and 3, scale 1:60 million, EPSG:4326) as GeoJSON, rebuilt from the Eurostat GISCO files. The boundary data is restricted to non-commercial use and needs the credit \"© EuroGeographics for the administrative boundaries\"; see the README.",
   "repository": {
     "type": "git",
     "url": "git://github.com/datasets/geo-nuts-administrative-boundaries.git"
   },
   "sources": [
     {
-      "name": "GISCO (the Geographical Information System at the COmmission)",
-      "path": "http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data",
-      "title": "GISCO (the Geographical Information System at the COmmission)"
+      "name": "Eurostat GISCO",
+      "path": "https://gisco-services.ec.europa.eu/distribution/v2/nuts/",
+      "title": "Eurostat GISCO (Geographical Information System of the Commission), NUTS boundaries"
     }
   ],
   "keywords": [
@@ -23,14 +23,20 @@
   "licenses": [
     {
       "name": "ODC-PDDL-1.0",
-      "path": "http://opendatacommons.org/licenses/pddl/",
-      "title": "Open Data Commons Public Domain Dedication and License v1.0"
+      "path": "https://opendatacommons.org/licenses/pddl/1.0/",
+      "title": "Open Data Commons Public Domain Dedication and License v1.0. Applies only to the maintainers' own work (the script, the file layout and the descriptor). It does not cover the boundary data."
+    },
+    {
+      "name": "Eurostat-GISCO-copyright",
+      "path": "https://ec.europa.eu/eurostat/web/gisco/geodata/statistical-units",
+      "title": "Eurostat GISCO copyright information. Applies to the three GeoJSON data files. Use of the data is limited to non-commercial purposes, and the source must be acknowledged with the notice \"© EuroGeographics for the administrative boundaries\". For commercial use, contact EuroGeographics."
     }
   ],
   "resources": [
     {
       "name": "nuts-rg-60m-2024-4326-levl-1",
       "path": "data/NUTS_RG_60M_2024_4326_LEVL_1.geojson",
+      "description": "NUTS level 1 regions as MultiPolygon features, with the country properties repeated on each region.",
       "format": "geojson",
       "mediatype": "application/geo+json",
       "bytes": 255061,
@@ -128,6 +134,7 @@
     {
       "name": "nuts-rg-60m-2024-4326-levl-2",
       "path": "data/NUTS_RG_60M_2024_4326_LEVL_2.geojson",
+      "description": "NUTS level 2 regions as MultiPolygon features, with the country properties repeated on each region.",
       "format": "geojson",
       "mediatype": "application/geo+json",
       "bytes": 422854,
@@ -225,6 +232,7 @@
     {
       "name": "nuts-rg-60m-2024-4326-levl-3",
       "path": "data/NUTS_RG_60M_2024_4326_LEVL_3.geojson",
+      "description": "NUTS level 3 regions as MultiPolygon features, with the country properties repeated on each region.",
       "format": "geojson",
       "mediatype": "application/geo+json",
       "bytes": 1168062,

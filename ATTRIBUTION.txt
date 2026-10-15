@@ -1,0 +1,15 @@
+Attribution for geo-nuts-administrative-boundaries
+
+Contains information from the NUTS (territorial units for statistics) boundaries of Eurostat GISCO (https://ec.europa.eu/eurostat/web/gisco/geodata/statistical-units/territorial-units-statistics). Licence: restricted. GISCO grants the right to use the data for non-commercial purposes only, on condition that the source is acknowledged (https://ec.europa.eu/eurostat/web/gisco/geodata/statistical-units). To use the data commercially, contact EuroGeographics for its licence agreements.
+
+Required notice (to be shown in the legend of any map and in the introductory page of any publication that uses the data):
+EN: © EuroGeographics for the administrative boundaries
+FR: © EuroGeographics pour les limites administratives
+DE: © EuroGeographics bezüglich der Verwaltungsgrenzen
+For publications in other languages, use the translation of the notice in the language of the publication.
+
+Contains boundaries of Türkiye that GISCO states were made using OpenStreetMap data (https://www.openstreetmap.org/copyright). Licence: unclear for this repo (none stated by GISCO for these features).
+
+Changes made to the source data: the three GeoJSON files (NUTS levels 1, 2 and 3, scale 60M, EPSG:4326, region polygons) are downloaded from GISCO and republished with one change: the top-level "crs" member is removed. All features and properties are otherwise unchanged.
+
+Not endorsed by, or affiliated with, Eurostat, the European Commission or EuroGeographics.
