@@ -33,7 +33,7 @@
       "path": "data/NUTS_RG_60M_2024_4326_LEVL_1.geojson",
       "format": "geojson",
       "mediatype": "application/geo+json",
-      "bytes": 233136,
+      "bytes": 255061,
       "schema": {
         "fields": [
           {
@@ -130,7 +130,7 @@
       "path": "data/NUTS_RG_60M_2024_4326_LEVL_2.geojson",
       "format": "geojson",
       "mediatype": "application/geo+json",
-      "bytes": 365566,
+      "bytes": 422854,
       "schema": {
         "fields": [
           {
@@ -227,7 +227,7 @@
       "path": "data/NUTS_RG_60M_2024_4326_LEVL_3.geojson",
       "format": "geojson",
       "mediatype": "application/geo+json",
-      "bytes": 904960,
+      "bytes": 1168062,
       "schema": {
         "fields": [
           {
